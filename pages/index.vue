@@ -11,7 +11,7 @@ useSeoMeta({
 })
 useHead({
   meta: [
-    { name: 'yandex-verification', content: '88059484990c5885' }
+    { name: 'yandex-verification', content: 'c29b9a116da1c96a' }
   ]
 })
 const data = ref([])
