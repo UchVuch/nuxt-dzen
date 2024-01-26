@@ -51,7 +51,7 @@ function fetchData () {
       ogImage: product.value.image,
       twitterCard: 'product'
     })
-  }, 500)
+  }, 1000)
 }
 fetchData()
 </script>
