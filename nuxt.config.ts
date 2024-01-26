@@ -9,6 +9,11 @@ export default defineNuxtConfig({
     'nuxt-simple-robots',
     '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    sources: [
+      'https://nuxt-dzen.vercel.app/pages/urls'
+    ]
+  },
   site: {
     url: 'https://nuxt-dzen.vercel.app/'
   }
