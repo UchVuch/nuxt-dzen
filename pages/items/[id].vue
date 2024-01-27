@@ -1,19 +1,28 @@
 <script setup>
 const route = useRoute()
 // const product = ref({
-//   name: '',
-//   firm: '',
-//   group: '',
-//   description: '',
-//   image: ''
-// })
-const {data} = useFetch(`https://jsonplaceholder.typicode.com/users/${route.params.id}`)
-useSeoMeta({
-  title: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
-  ogTitle: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
-  description: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`,
-  ogDescription: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`
-})
+  //   name: '',
+  //   firm: '',
+  //   group: '',
+  //   description: '',
+  //   image: ''
+  // })
+  const {data, pending} = useFetch(`https://jsonplaceholder.typicode.com/users/${route.params.id}`)
+  console.log('asfdsafsd', pending.value)
+ watch(
+  () => pending.value,
+  () => {
+    console.log(pending.value)
+    if (pending.value === false) {
+      useSeoMeta({
+        title: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
+        ogTitle: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
+        description: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`,
+        ogDescription: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`
+      })
+    }
+  }
+)
 // function fetchData () {
 //   setTimeout(() => {
 //     data.value = [
