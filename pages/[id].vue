@@ -11,10 +11,10 @@ const {data} = useFetch('https://fakerapi.it/api/v1/products?_quantity=1&_taxes=
   pick: ['data']
 })
 useSeoMeta({
-  title: `DS-H104G 4-х канальный гибридный HD-TVI регистратор | Dzen`,
-  ogTitle: `DS-H104G 4-х канальный гибридный HD-TVI регистратор | Dzen`,
-  description: `DS-H104G HD-TVI регистратор; гибридный; 4-х канальный; AHD; TVI; CVI: 1080p Lite/ 720p@25к/с; 1 SATA; 1 IP-канал; 12В DC;  8Вт; HiWatch 300217353. DS-H104G HD-TVI регистратор; гибридный; 4-х канальный; AHD; TVI; CVI: 1080p Lite/ 720p@25к/с; 1 SATA; 1 IP-канал; 12В DC;  8Вт; HiWatch 300217353 в Липецке. Липецк`,
-  ogDescription:  `DS-H104G HD-TVI регистратор; гибридный; 4-х канальный; AHD; TVI; CVI: 1080p Lite/ 720p@25к/с; 1 SATA; 1 IP-канал; 12В DC;  8Вт; HiWatch 300217353. DS-H104G HD-TVI регистратор; гибридный; 4-х канальный; AHD; TVI; CVI: 1080p Lite/ 720p@25к/с; 1 SATA; 1 IP-канал; 12В DC;  8Вт; HiWatch 300217353 в Липецке. Липецк`
+  title: `Купить аниме фигурку DarkTimes Samurai | Dzen-агрегатор`,
+  ogTitle: `Купить аниме фигурку DarkTimes Samurai | Dzen-агрегатор`,
+  description: `Купить аниме фигурку DarkTimes Samurai - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`,
+  ogDescription: `Купить аниме фигурку DarkTimes Samurai - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`
 })
 // function fetchData () {
 //   setTimeout(() => {
