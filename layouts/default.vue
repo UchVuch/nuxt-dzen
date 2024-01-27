@@ -7,6 +7,10 @@ const links = [
   {
     to: '/about',
     name: 'О нас'
+  },
+  {
+    to: '/items',
+    name: 'Страница товаров'
   }
 ]
 </script>

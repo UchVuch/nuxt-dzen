@@ -41,63 +41,66 @@ function fetchData () {
 fetchData()
 </script>
 <template>
-  <div class="grid grid-cols-1 gap-4">
-    <ULink
-      v-for="item in data"
-      :key="item.id"
-      :to="`/items/${item.id}`"
-      active-class="text-primary"
-      inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-    >
-      <UCard>
-        <template #header>
+  <div>
+    <h1>Страница товаров</h1>
+    <div class="grid grid-cols-1 gap-4">
+      <ULink
+        v-for="item in data"
+        :key="item.id"
+        :to="`/items/${item.id}`"
+        active-class="text-primary"
+        inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+      >
+        <UCard>
+          <template #header>
+            
+              <h2>
+                {{ item.name }}
+              </h2>
+            
+          </template>
+
           
-            <h2>
-              {{ item.name }}
-            </h2>
+            <p>{{ item.email }}</p>
           
-        </template>
+          <template #footer>
+            
+              <p>
+                {{ item.phone }}
+              </p>
+            
+          </template>
+        </UCard>
+      </ULink>
+      <ULink
+        v-for="item in items"
+        :key="item.id"
+        :to="`/${item.id}`"
+        active-class="text-primary"
+        inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+      >
+        <UCard>
+          <template #header>
+            
+              <h2>
+                {{ item.name }}
+              </h2>
+            
+          </template>
 
         
-          <p>{{ item.email }}</p>
-        
-        <template #footer>
+            <img :src="item.image" alt="item image" title="item.name" class="w-40 h-40 object-cover rounded">
           
-            <p>
-              {{ item.phone }}
-            </p>
-          
-        </template>
-      </UCard>
-    </ULink>
-    <ULink
-      v-for="item in items"
-      :key="item.id"
-      :to="`/${item.id}`"
-      active-class="text-primary"
-      inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-    >
-      <UCard>
-        <template #header>
-          
-            <h2>
-              {{ item.name }}
-            </h2>
-          
-        </template>
 
-       
-          <img :src="item.image" alt="item image" title="item.name" class="w-40 h-40 object-cover rounded">
-        
-
-        <template #footer>
+          <template #footer>
+            
+              <p>
+                {{ item.description }}
+              </p>
           
-            <p>
-              {{ item.description }}
-            </p>
-         
-        </template>
-      </UCard>
-    </ULink>
+          </template>
+        </UCard>
+      </ULink>
+    </div>
   </div>
 </template>
