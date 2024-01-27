@@ -8,9 +8,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <h2>
+  <h1>
     О наc. Наша история. Контакты
-  </h2>
+  </h1>
 </template>
 
 <style scoped>

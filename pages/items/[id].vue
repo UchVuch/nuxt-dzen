@@ -9,10 +9,10 @@ const route = useRoute()
 // })
 const {data} = useFetch(`https://jsonplaceholder.typicode.com/users/${route.params.id}`)
 useSeoMeta({
-  title: `Купить аниме фигурку DarkTimes Samurai | Dzen-агрегатор`,
-  ogTitle: `Купить аниме фигурку DarkTimes Samurai | Dzen-агрегатор`,
-  description: `Купить аниме фигурку DarkTimes Samurai - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`,
-  ogDescription: `Купить аниме фигурку DarkTimes Samurai - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`
+  title: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
+  ogTitle: `${data.value.name} ${data.value.surname} | Dzen-агрегатор`,
+  description: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`,
+  ogDescription: `${data.value.name} ${data.value.surname} |  - купить в Липецке по выгодным ценам на Dzen-агрегатор Липецк! &#10004; Скидки. &#10004; Реальные отзывы покупателей. &#10004; Быстрая доставка по РФ. &#10004; Dzen-агрегатор Липецк – найди лучшие товары для покупок!`
 })
 // function fetchData () {
 //   setTimeout(() => {
